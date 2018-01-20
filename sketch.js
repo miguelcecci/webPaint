@@ -1,11 +1,13 @@
 var aux = 0;
-var redi = 200;
-var bluei = 100;
-var greeni = 100;
+var redi = 20;
+var bluei = 20;
+var greeni = 20;
 var opacidade = 255;
 var espessura = 4;
 
 function setup() {
+  textAlign(CENTER);
+  textSize(16);
   createCanvas(windowWidth, windowHeight);
   xw=windowWidth;
   yw=windowHeight;
@@ -18,7 +20,7 @@ function draw(){
   paint();
 }
 
-function clear(){
+function limpar(){
   background(255);
 }
 
@@ -53,10 +55,14 @@ function buttonEspM(x, y, size){
       espessura = espessura-1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('-', x+size/2, y+size/2);
 }
 
 function buttonShowE(x, y, size){
-    fill(redi, greeni, bluei);
+    fill(redi*5, greeni*5, bluei*5);
     noStroke();
     ellipse(x+size/2, y+size/2, 2+espessura/10, 2+espessura/10);
 }
@@ -68,6 +74,10 @@ function buttonEspL(x, y, size){
       espessura = espessura+1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('+', x+size/2, y+size/2);
 }
 
 
@@ -78,6 +88,10 @@ function buttonBlueM(x, y, size){
       bluei = bluei-1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('-', x+size/2, y+size/2);
 }
 
 function buttonShowB(x, y, size){
@@ -93,6 +107,10 @@ function buttonBlueL(x, y, size){
       bluei = bluei+1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('+', x+size/2, y+size/2);
 }
 
 
@@ -103,6 +121,10 @@ function buttonGreenM(x, y, size){
       greeni = greeni-1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('-', x+size/2, y+size/2);
 }
 
 function buttonShowG(x, y, size){
@@ -117,6 +139,10 @@ function buttonGreenL(x, y, size){
       greeni = greeni+1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('+', x+size/2, y+size/2);
 }
 
 
@@ -127,6 +153,10 @@ function buttonRedM(x, y, size){
       redi = redi-1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('-', x+size/2, y+size/2);
 }
 
 function buttonShowR(x, y, size){
@@ -141,6 +171,10 @@ function buttonRedL(x, y, size){
       redi = redi+1;
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('+', x+size/2, y+size/2);
 }
 
 function buttonClear(x, y, size){
@@ -150,6 +184,10 @@ function buttonClear(x, y, size){
       background(255);
     }
   }
+  textSize(16);
+  textAlign(CENTER);
+  fill(0);
+  text('X', x+size/2, y+size/2);
 }
 
 
